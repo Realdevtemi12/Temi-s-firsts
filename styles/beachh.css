@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+.main {
+    text-align: center;
+    background: url("/images/beachtree1.jpg") center center no-repeat;
+    background-size: cover;
+    height: 100
+
+}
+
+.main .heading{
+    margin: 0%;
+    padding: 22% 0;
+
+}
+
+.main .heading h1{
+    font-size: 4.4rem;
+    padding: 0;
+    margin: 0;
+    color:darkorange
+}
+
+.main .heading p{
+    font-size: 2.0rem;
+    margin: 40px 0;
+    color:darkorange
+
+}
+
+.main .heading button{
+    font-weight: 3000vh;
+    font-family: cursive;
+    background-color: transparent;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1.0rem;
+    border: 2px groove burlywood
+}
+
+.texts{
+    text-align: center;
+    color: forestgreen;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.texts1{
+    font-size: 15px;
+    color: chocolate;
+    columns: 3;
+    
+
+}
+
+
+.main .heading button:hover {
+    background-color: cornflowerblue;
+    color: crimson;
+}

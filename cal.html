@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            margin: 0;
+            place-items: left;
+        }
+        h1{
+            background-color: antiquewhite;
+            color: slategray;
+        }
+        .calculator{
+            width: 40rem;
+            height: 40rem;
+            display: grid;
+            border: 1px solid black;
+            grid-template-columns: repeat(4 , 1fr);
+        }
+
+        .btn{
+            cursor: pointer;
+        }
+
+        .num{
+            background-color: bisque;
+        }
+        .fig{
+            background-color: crimson;
+        }
+        .numb{
+            background-color: darkorange;
+        }
+     
+        .screen{
+            height: 10vh;
+            width: 45%;
+            background-color: chocolate;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="screen">
+        <h1></h1>
+    </div>
+    <div class="calculator">
+        <input type="button" class="btn num" value="1">
+        <input type="button" class="btn fig" value="2">
+        <input type="button" class="btn numb" value="3">
+        <input type="button" class="btn num" value="4">
+        <input type="button" class="btn fig" value="5">
+        <input type="button" class="btn num" value="6">
+        <input type="button" class="btn fig" value="7">
+        <input type="button" class="btn numb" value="8">
+        <input type="button" class="btn num" value="9">
+        <input type="button" class="btn numb" value="0">
+        <input type="button" class="btn fig" value="+">
+        <input type="button" class="btn numb" value="-">
+        <input type="button" class="btn num" value="x">
+        <input type="button" class="btn fig" value="=">
+    </div>
+
+
+    <script>
+        let screen = document.querySelector('h1');
+        const btns = document.querySelectorAll('.btn');
+        let val = 0;
+        let result = 0;
+        let p = '';
+        let last = '';
+        for (const btn of btns){
+            btn.addEventListener('click', function(){
+                key = btn.value;
+                screen.textContent += ' ' + key;
+                if (key === '+'){
+                    val= Number (p)
+                    result += val;
+                    p ='';
+                    last = '+';
+                }else if (key === '-'){
+                    if (result == 0){
+                        result = Number (p);
+                    }else{
+                        result= Number(p);
+                    }
+                    p = "";
+                    last = "-";
+                } else if (key === "="){
+                    if (last === "+"){
+                        screen.textContent += " " + (result + Number(p));
+                    }else {
+                        screen.textContent +=" " + (result - Number(p));
+                    }
+                }else {
+                    p += key;
+                }
+            });
+        }; 
+    </script>
+
+
+
+    </div>
+</body>
+</html>

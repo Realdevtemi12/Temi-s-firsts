@@ -1,0 +1,60 @@
+/* colors */
+p {
+    color: darksalmon;
+}
+/* end of colors */
+
+
+/* fonts */
+ html {
+    height: 100px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: gainsboro;
+}
+
+h3 {
+    font-size: 70px;
+    text-align:center;
+    margin: 0;
+    padding: 60px 0;
+    color: goldenrod;
+    text-shadow: 5px 5px 15px gray;
+
+}
+
+p,li{
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: crimson;
+
+}
+/* end of fonts */
+
+
+body{
+    height: 100px;
+    width: 800px;
+    margin: 0 auto;
+    background-color: darkgray;
+    padding: 0, 20px 20px 20px;
+    border: darkgray 5px solid;
+}
+
+
+img{
+    background: url("../assets/seaimage2");
+    
+    /* full height */
+
+    height: 100vh;
+
+    /* end of height */
+
+    /* center and scale image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
